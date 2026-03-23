@@ -6,7 +6,7 @@ const Categories = () => {
         <div>
             {categories.map((category) => {
                 return (
-                    <div>
+                    <div key={category.category} >
                         <img src={category.icon} ></img>
                         <div>{category.category}</div>
                         <div>{category.score} / 100</div>
@@ -19,7 +19,7 @@ const Categories = () => {
 
 const Summary = () => {
     return (
-        <div>
+        <div className='summary'>
             <div>Summary</div>
             <Categories />
             <button>Continue</button>
@@ -38,7 +38,7 @@ const Score = () => {
 
 const Results = () => {
     return (
-        <div>
+        <div className='results'>
             <div>Your Result</div>
             <Score />
             <div>RATE</div>
@@ -49,7 +49,7 @@ const Results = () => {
 
 const Card = () => {
     return (
-        <div>
+        <div className='card'>
             <Results />
             <Summary />
         </div>
